@@ -1,15 +1,19 @@
-import illustration from "@/assets/side.jpeg"
+import illustration from "@/assets/04.jpeg"
+import bgImage from "@/assets/9.png"      // ya 10.jpeg jo bhi use karna ho
 import FormComponent from "@/components/forms/FormComponent"
- //import Footer from "@/components/common/Footer";
+// import Footer from "@/components/common/Footer";
 
 function HomePage() {
     return (
-        <div className="flex min-h-screen flex-col items-center justify-center gap-16">
+        <div
+            className="flex min-h-screen flex-col items-center justify-center gap-16 bg-black bg-cover bg-center bg-no-repeat text-white"
+            style={{ backgroundImage: `url(${bgImage})` }}   // yahan se background lagega
+        >
             <div className="my-12 flex h-full min-w-full flex-col items-center justify-evenly sm:flex-row sm:pt-0">
                 <div className="flex w-full animate-up-down justify-center sm:w-1/2 sm:pl-4">
                     <img
                         src={illustration}
-                        alt="CodeVerse Collaboration Illustration"   // updated alt text
+                        alt="CodeVerse Collaboration Illustration"
                         className="mx-auto w-[250px] sm:w-[400px]"
                     />
                 </div>
@@ -17,9 +21,11 @@ function HomePage() {
                     <FormComponent />
                 </div>
             </div>
-             {/* <Footer />  */}
+
+            {/* <Footer /> */}
         </div>
     )
 }
 
 export default HomePage
+
